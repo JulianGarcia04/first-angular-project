@@ -27,8 +27,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-# first-angular-project
+## About project
 This project is a demo do in the angular 16 course of midudev and nico bytes
 
-# this is the video
+## This is the video
 https://www.youtube.com/watch?v=sS90VVmBPcg&t=3153s
