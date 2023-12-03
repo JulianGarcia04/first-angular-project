@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# AngularTextV16
+# AngularTestV16
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
@@ -26,7 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
+
+
 # first-angular-project
 This project is a demo do in the angular 16 course of midudev and nico bytes
->>>>>>> 1f35a85c8829f8fc9964f61fab2dc6fc68abf681
+
+#this is the video
+https://www.youtube.com/watch?v=sS90VVmBPcg&t=3153s
