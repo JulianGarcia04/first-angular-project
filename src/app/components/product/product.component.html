@@ -1,0 +1,10 @@
+<article *ngIf="product" class="cat-product">
+  <app-carousel [(nroElements)]="counter" [disableNavigation]="!nextImage">
+    <img [ngSrc]="currImage" alt="gatos" [width]="250" [height]="250" />
+  </app-carousel>
+  <h4>{{ product.title }}</h4>
+  <p>{{ product.precio }}</p>
+</article>
+<article *ngIf="!product">
+  <h4>EL producto no existe</h4>
+</article>

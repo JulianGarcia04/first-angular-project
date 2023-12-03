@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-text-v16",
+            "outputPath": "dist/angular-text-v16/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -97,8 +97,66 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/angular-text-v16/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "angular-text-v16:build:development",
+              "serverTarget": "angular-text-v16:server:development"
+            },
+            "production": {
+              "browserTarget": "angular-text-v16:build:production",
+              "serverTarget": "angular-text-v16:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-text-v16:build:production",
+              "serverTarget": "angular-text-v16:server:production"
+            },
+            "development": {
+              "browserTarget": "angular-text-v16:build:development",
+              "serverTarget": "angular-text-v16:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "584bc502-c5b5-4f0c-8bed-8f592b569537"
   }
 }
